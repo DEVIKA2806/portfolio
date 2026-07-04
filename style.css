@@ -37,7 +37,7 @@ html {
 }
 .navitem ul {
     display: flex;
-    gap: 45px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -322,104 +322,124 @@ html {
 }
 }
 
-/* ===========================
-   ACTIVITY
-=========================== */
-/* =====================
-ACTIVITIES
-===================== */
+/* ==========================================
+            ACTIVITIES SECTION
+========================================== */
 
 .activities{
-
     max-width:1200px;
     margin:100px auto;
-    padding:50px;
+    padding:40px 50px;
     background:#e4e2e2;
     border-radius:12px;
-
+    overflow:hidden;
 }
+
+.activities .project-title{
+    margin-bottom:35px;
+}
+
+/* ---------------- Wrapper ---------------- */
 
 .activity-wrapper{
 
     display:flex;
-    justify-content:center;
-    gap:35px;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:22px;
 
 }
 
+/* ---------------- Card ---------------- */
+
 .activity-card{
 
-    width:320px;
-    background:white;
+    width:290px;
+    background:#fff;
     border-radius:18px;
     overflow:hidden;
+
     cursor:pointer;
-    transition:.45s;
+
+    transition:.4s;
+
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
 .activity-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    box-shadow:0 20px 40px rgba(0,0,0,.16);
 
 }
 
+/* ---------------- Preview ---------------- */
+
 .activity-preview{
 
-    padding:35px;
+    padding:30px 20px;
     text-align:center;
 
 }
 
+/* ---------------- Icon ---------------- */
+
 .activity-circle{
 
-    width:120px;
-    height:120px;
+    width:90px;
+    height:90px;
 
     margin:auto;
 
     border-radius:50%;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    font-size:48px;
+    background:linear-gradient(135deg,#202020,#555);
 
     color:white;
 
-    background:linear-gradient(135deg,#111,#666);
+    font-size:34px;
 
-    transition:.4s;
+    transition:.35s;
 
 }
 
 .activity-card:hover .activity-circle{
 
-    transform:scale(1.08) rotate(6deg);
+    transform:scale(1.08);
 
 }
 
-.large{
-
-    width:220px;
-
-    height:220px;
-
-    font-size:90px;
-
-}
+/* ---------------- Text ---------------- */
 
 .activity-info{
 
-    margin-top:25px;
+    margin-top:18px;
 
 }
+
+.activity-info h3{
+
+    font-size:22px;
+    margin-bottom:6px;
+    line-height:1.25;
+
+}
+
+.activity-info p{
+
+    color:#666;
+    font-size:15px;
+    margin:0;
+
+}
+
+/* ---------------- Expanded ---------------- */
 
 .activity-expanded{
 
@@ -430,6 +450,7 @@ ACTIVITIES
 .activity-card.active{
 
     width:100%;
+    cursor:default;
 
 }
 
@@ -442,12 +463,9 @@ ACTIVITIES
 .activity-card.active .activity-expanded{
 
     display:flex;
-
-    gap:50px;
-
-    padding:40px;
-
-    animation:fade .4s;
+    gap:45px;
+    padding:35px;
+    animation:fade .35s ease;
 
 }
 
@@ -457,23 +475,111 @@ ACTIVITIES
 
 }
 
+/* ---------------- Left Side ---------------- */
+
 .expanded-icon{
 
-    width:300px;
+    width:240px;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
 }
 
+.large{
+
+    width:170px;
+    height:170px;
+
+    font-size:68px;
+
+}
+
+/* ---------------- Right Side ---------------- */
+
+.expanded-content{
+
+    flex:1;
+
+}
+
+.expanded-content h2{
+
+    margin-bottom:18px;
+
+}
+
+.expanded-content p{
+
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+
+}
+
+/* ---------------- Certificate Button ---------------- */
+
+.project-links{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.project-links a{
+
+    text-decoration:none;
+
+    border:2px solid black;
+
+    color:black;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.project-links a:hover{
+
+    background:black;
+
+    color:white;
+
+}
+
+/* ---------------- Back ---------------- */
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+/* ---------------- Mobile ---------------- */
+
 @media(max-width:900px){
+
+.activities{
+
+    width:90%;
+    padding:25px;
+
+}
 
 .activity-wrapper{
 
     flex-wrap:wrap;
+    justify-content:center;
 
 }
 
@@ -492,6 +598,15 @@ ACTIVITIES
 .expanded-icon{
 
     width:100%;
+
+}
+
+.large{
+
+    width:140px;
+    height:140px;
+
+    font-size:55px;
 
 }
 
