@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">    
+    <title>Portfolio</title>
+</head>
+<body class="body">
+    <div class="navbar">
+        <div class="name">DEVIKA SAWANT</div>
+        <div class="navitem">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li>|</li>
+                <li><a href="#skills">Skills</a></li>
+                <li>|</li>
+                <li><a href="#projects">Projects</a></li>
+                <li>|</li>
+                <li><a href="#activities">Activities</a></li>
+                <li>|</li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <button onclick="openModal()">Contact Me</button>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/mnjwaerp" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mainpage">
+        <div class="intro">
+            <h1 class="heading">WEB DEVELOPER</h1>
+            <p class="para tagline">Building clean and scalable web applications.</p>
+            <p class="para">Final-year BSc Computer Science student and web developer focused on building responsive, user-friendly applications using React, JavaScript, and modern web technologies.</p>
+        </div>
+        <img class="self1" src="assets/self2.jpeg" alt="Self-Image-1">
+    </div>
+    <div class="about" id="about">
+        <h1>ABOUT</h1>
+        <p>I’m Devika Sawant, a final-year BSc Computer Science student with a strong interest in web development. I enjoy building responsive and user-friendly web applications using technologies like HTML, CSS, JavaScript, React, and Node.js.</p>
+        <p>I have worked on several projects that focus on real-world problem solving, including full-stack web applications and interactive interfaces. My approach is to keep designs simple, efficient, and functional while ensuring a smooth user experience.</p>
+        <p>I am currently looking for opportunities where I can apply my skills, gain practical experience, and grow as a developer.</p>
+    </div>
+
+    <section class="skills" id="skills">
+
+        <h1>SKILLS</h1>
+
+        <div class="skills-grid">
+
+            <!-- Technical Skills -->
+
+            <div class="skill-card">
+
+                <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
+
+                <div class="skill-category">
+
+                    <h3>Frontend</h3>
+
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React.js</span>
+                        <span>Bootstrap</span>
+                        <span>Responsive Design</span>
+                    </div>
+
+                </div>
+
+                <div class="skill-category">
+
+                    <h3>Backend</h3>
+
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                </div>
+
+                <div class="skill-category">
+
+                    <h3>Tools & Extras</h3>
+
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>REST APIs</span>
+                        <span>Postman</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Theory -->
+
+            <div class="skill-card">
+
+                <h2><i class="fa-solid fa-book"></i> Computer Science Fundamentals</h2>
+
+                <div class="skill-tags">
+
+                    <span>Data Structures</span>
+                    <span>Operating Systems</span>
+                    <span>DBMS</span>
+                    <span>Computer Networks</span>
+                    <span>Software Engineering</span>
+                    <span>Object-Oriented Programming</span>
+                    <span>Web Technologies</span>
+
+                </div>
+
+            </div>
+
+            <!-- Soft Skills -->
+
+            <div class="skill-card">
+
+                <h2><i class="fa-solid fa-users"></i> Soft Skills</h2>
+
+                <div class="skill-tags">
+
+                    <span>Communication</span>
+                    <span>Teamwork</span>
+                    <span>Problem Solving</span>
+                    <span>Leadership</span>
+                    <span>Time Management</span>
+                    <span>Adaptability</span>
+                    <span>Creativity</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="projects" id="projects">
+        <h1 class="project-title">PROJECTS</h1>
+        <div class="project-wrapper">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openProject(this)">
+                <div class="project-preview">
+                    <img src="assets/web1.jpg">
+                    <div class="project-info">
+                        <h3>Hand-To-Heart</h3>
+                        <p>Community Marketplace</p>
+                        <div class="stack">
+                            <span>React</span>
+                            <span>Node</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-expanded">
+                    <span class="back-btn"
+                    onclick="closeProject(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-image">
+                        <img src="assets/web1.jpg">
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Hand-To-Heart</h2>
+                        <p>
+                            Hand-To-Heart is an online marketplace created
+                            for women, specially abled people and elderly
+                            artisans to sell handmade products.
+                            The website allows sellers to upload products
+                            while buyers can browse and purchase items easily.
+                        </p>
+                        <h4>Tech Stack</h4>
+                        <div class="stack big">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="YOUR_GITHUB_LINK">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openProject(this)">
+                <div class="project-preview">
+                    <img src="assets/web2.jpg">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Developer Portfolio</p>
+                        <div class="stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-expanded">
+                    <span class="back-btn"
+                    onclick="closeProject(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-image">
+                        <img src="assets/web2.jpg">
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Portfolio Website</h2>
+                        <p>
+                            A modern portfolio showcasing projects,
+                            skills and achievements with smooth
+                            animations and responsive design.
+                        </p>
+                        <h4>Tech Stack</h4>
+                        <div class="stack big">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="YOUR_GITHUB">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" onclick="openProject(this)">
+                <div class="project-preview">
+                    <img src="assets/web3.jpg">
+                    <div class="project-info">
+                        <h3>SN Candles</h3>
+                        <p>E-Commerce Website</p>
+                        <div class="stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-expanded">
+                    <span class="back-btn"
+                    onclick="closeProject(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-image">
+                        <img src="assets/web3.jpg">
+                    </div>
+                    <div class="expanded-content">
+                        <h2>SN Candles</h2>
+                        <p>
+                            E-commerce website developed for
+                            handmade organic candles.
+                        </p>
+                        <h4>Tech Stack</h4>
+                        <div class="stack big">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="YOUR_GITHUB">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" onclick="openProject(this)">
+                <div class="project-preview">
+                    <img src="assets/web4.jpg">
+                    <div class="project-info">
+                        <h3>Salon Website</h3>
+                        <p>Business Website</p>
+                        <div class="stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-expanded">
+                    <span class="back-btn"
+                    onclick="closeProject(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-image">
+                        <img src="assets/web4.jpg">
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Salon Website</h2>
+                        <p>
+                            A salon management website with
+                            elegant UI for customers.
+                        </p>
+                        <h4>Tech Stack</h4>
+                        <div class="stack big">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="YOUR_GITHUB">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities" id="activities">
+        <h1 class="project-title">EXTRA CURRICULAR ACTIVITIES</h1>
+        <div class="activity-wrapper">
+            <!-- Activity 1 -->
+            <div class="activity-card" onclick="openActivity(this)">
+                <div class="activity-preview">
+                    <div class="activity-circle">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Hackstreet Frontend + AI</h3>
+                        <p>Hackathon Participant</p>
+                    </div>
+                </div>
+                <div class="activity-expanded">
+                    <span class="back-btn"
+                    onclick="closeActivity(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-icon">
+                        <div class="activity-circle large">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Hackstreet Frontend + AI Hackathon</h2>
+                        <p>
+                            Participated in the Hackstreet Frontend + AI
+                            Hackathon where I collaborated with my teammates
+                            to build innovative AI-powered frontend solutions.
+                            The event strengthened my teamwork,
+                            frontend development and problem-solving skills.
+                        </p>
+                        <h4>Skills Gained</h4>
+                        <div class="stack big">
+                            <span>Frontend</span>
+                            <span>AI</span>
+                            <span>Teamwork</span>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assets/hackathon-certificate.pdf"
+                            target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="activity-card" onclick="openActivity(this)">
+                <div class="activity-preview">
+                    <div class="activity-circle">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Technical Team</h3>
+                        <p>Syntechxist</p>
+                    </div>
+                </div>
+                <div class="activity-expanded">
+                    <span class="back-btn"
+                    onclick="closeActivity(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-icon">
+                        <div class="activity-circle large">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Technical Team Volunteer</h2>
+                        <p>
+                            Volunteered in the Technical Team for
+                            Syntechxist, an AI & Technology Quiz Competition.
+                            Managed technical setup,
+                            event coordination and ensured smooth execution.
+                        </p>
+                        <h4>Skills Gained</h4>
+                        <div class="stack big">
+                            <span>Leadership</span>
+                            <span>Communication</span>
+                            <span>Technical Support</span>
+                            <span>Teamwork</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assets/technical-team-certificate.pdf"
+                            target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="activity-card" onclick="openActivity(this)">
+                <div class="activity-preview">
+                    <div class="activity-circle">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Creative Head</h3>
+                        <p>Syntech-X</p>
+                    </div>
+                </div>
+                <div class="activity-expanded">
+                    <span class="back-btn"
+                    onclick="closeActivity(event)">
+                        ← Back
+                    </span>
+                    <div class="expanded-icon">
+                        <div class="activity-circle large">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                    </div>
+                    <div class="expanded-content">
+                        <h2>Creative Head</h2>
+                        <p>
+                            Served as the Creative Head for Syntech-X.
+                            Designed posters, social media creatives,
+                            event branding and coordinated the complete
+                            visual identity of the department festival.
+                        </p>
+                        <h4>Skills Gained</h4>
+                        <div class="stack big">
+                            <span>Creativity</span>
+                            <span>Design</span>
+                            <span>Leadership</span>
+                            <span>Planning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="assets/creative-head-certificate.pdf"
+                            target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="resume" id="resume">
+        <h1>RESUME</h1>
+        <p>Explore my resume to learn more about my skills, projects, and development journey.</p>
+        <a href="assets/resume.pdf" target="_blank" class="cv">Download CV</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Devika Sawant</h3>
+            <p>Building clean and scalable web applications.</p>
+
+            <div class="socials">
+                <p>SOCIALS</p>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/devika-sawant-146327269"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:devikasawant2005@email.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <p class="copyright">
+                © 2026 Devika Sawant. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
